@@ -5,12 +5,25 @@ public class Port
 
     public static final String DEFAULT = "default";
 
+    /**
+     * When true will break the build if the preferred port number is not available. If false will allocate another
+     * port.
+     */
     private boolean failIfOccupied;
 
+    /**
+     * Port name used to add to properties. Required.
+     */
     private String name;
 
+    /**
+     * A preferred port
+     */
     private int portNumber;
 
+    /**
+     * The port type. At present time the only accepted value is 'default'
+     */
     private String type = DEFAULT;
 
     public String getName()

@@ -9,6 +9,8 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
 
 /**
+ * Allocate ports to be used during build process
+ *
  * @goal allocate-ports
  * @author velo
  */

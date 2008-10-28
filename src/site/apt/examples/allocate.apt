@@ -1,0 +1,39 @@
+ ------
+ Plugin configuration
+ ------
+ Marvin Herman Froeder
+ ------
+ 27 out 2008
+ ------
+
+Port Allocator Maven Plugin
+
+  How to allocate a random port
+
++-----
+...
+<plugin>
+  <groupId>org.sonatype.plugins</groupId>
+  <artifactId>port-allocator-maven-plugin</artifactId>
+  <executions>
+    <execution>
+      <phase>validate</phase>
+      <goals>
+        <goal>allocate-ports</goal>
+      </goals>
+      <configuration>
+        <ports>
+          <port>
+            <name>my-first-port</name>
+          </port>
+        </ports>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+...   
++-----
+
+  The port name will be injected to maven properties, so, it can be used if future like this: $\{my-first-port\}
+
+  For a full list of ports attributes, see the {{{../xref/org/sonatype/plugins/portallocator/Port.html}Port javadoc}}.

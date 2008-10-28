@@ -10,7 +10,10 @@
 
   <artifactId>port-allocator-maven-plugin</artifactId>
   <version>1.0-SNAPSHOT</version>
+
   <packaging>maven-plugin</packaging>
+
+  <name>Port Allocator Plugin</name>
 
   <build>
     <plugins>
@@ -22,6 +25,10 @@
           <source>1.5</source>
           <target>1.5</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
@@ -38,5 +45,13 @@
       <version>2.0</version>
     </dependency>
   </dependencies>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
