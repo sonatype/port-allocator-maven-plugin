@@ -9,7 +9,7 @@
   </parent>
 
   <artifactId>port-allocator-maven-plugin</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <packaging>maven-plugin</packaging>
 
@@ -54,4 +54,10 @@
     </plugins>
   </reporting>
 
+
+  <scm>
+    <connection>scm:svn:http://svn.sonatype.org/plugins/tags/port-allocator-maven-plugin-1.0</connection>
+    <developerConnection>scm:svn:https://svn.sonatype.org/plugins/tags/port-allocator-maven-plugin-1.0</developerConnection>
+    <url>http://svn.sonatype.org/plugins/tags/port-allocator-maven-plugin-1.0</url>
+  </scm>
 </project>
