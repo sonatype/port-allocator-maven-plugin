@@ -26,6 +26,22 @@ public class Port
      */
     private String type = DEFAULT;
 
+    public Port()
+    {
+        super();
+    }
+
+    public Port( String name )
+    {
+        super();
+        this.name = name;
+    }
+
+    public boolean getFailIfOccupied()
+    {
+        return failIfOccupied;
+    }
+
     public String getName()
     {
         return name;
@@ -39,11 +55,6 @@ public class Port
     public String getType()
     {
         return type;
-    }
-
-    public boolean getFailIfOccupied()
-    {
-        return failIfOccupied;
     }
 
     public void setFailIfOccupied( boolean failIfOccupied )

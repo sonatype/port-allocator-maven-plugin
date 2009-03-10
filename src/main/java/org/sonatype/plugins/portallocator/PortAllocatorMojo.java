@@ -108,4 +108,14 @@ public class PortAllocatorMojo
         return portNumber;
     }
 
+    public void setProject( MavenProject project )
+    {
+        this.project = project;
+    }
+
+    public void setPorts( Port[] ports )
+    {
+        this.ports = ports;
+    }
+
 }
