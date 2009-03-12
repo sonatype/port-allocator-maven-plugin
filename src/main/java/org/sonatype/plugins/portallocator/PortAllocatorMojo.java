@@ -55,7 +55,7 @@ public class PortAllocatorMojo
                 throw new MojoFailureException( "Unssuported port type '" + type + "' for '" + port.getName() + "'" );
             }
 
-            getLog().info( "Assigning port '" + portNumber + "' to property '" + name + "'" );
+            getLog().debug( "Assigning port '" + portNumber + "' to property '" + name + "'" );
             project.getProperties().put( name, String.valueOf( portNumber ) );
         }
     }
