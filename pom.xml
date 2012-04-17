@@ -4,8 +4,7 @@
   <parent>
     <groupId>org.sonatype.plugins</groupId>
     <artifactId>plugins-parent</artifactId>
-    <version>5</version>
-    <relativePath>../plugins-parent/pom.xml</relativePath>
+    <version>8</version>
   </parent>
 
   <artifactId>port-allocator-maven-plugin</artifactId>
@@ -15,20 +14,43 @@
 
   <name>Port Allocator Plugin</name>
 
+  <url>http://github.com/sonatype/port-allocator-maven-plugin</url>
+
+  <scm>
+    <connection>scm:git:git@github.com:sonatype/port-allocator-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:sonatype/port-allocator-maven-plugin.git</developerConnection>
+    <url>http://github.com/sonatype/port-allocator-maven-plugin</url>
+  </scm>
+
+  <ciManagement>
+    <system>Hudson</system>
+    <url>https://builds.sonatype.org/job/port-allocator-maven-plugin/</url>
+  </ciManagement>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <forgeReleaseUrl>https://repository.sonatype.org/service/local/staging/deploy/maven2</forgeReleaseUrl>
+  </properties>
+
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
         <configuration>
           <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
           <source>1.5</source>
           <target>1.5</target>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
@@ -46,11 +68,4 @@
     </dependency>
   </dependencies>
 
-  <reporting>
-    <plugins>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </reporting>
 </project>
